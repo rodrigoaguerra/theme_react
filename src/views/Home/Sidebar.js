@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import List from './List';
 
 function Sidebar(props) {
   const { archives, description, social, title } = props;
@@ -17,6 +18,10 @@ function Sidebar(props) {
         </Typography>
         <Typography>{description}</Typography>
       </Paper>
+      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+        Categories
+      </Typography>
+      <List />
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Archives
       </Typography>

@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import Markdown from './Markdown';
+import Container from '@mui/material/Container';
+import Cards from '../Commun/Cards';
+import Pagination from '../Commun/Pagination';
 
 function Main(props) {
   const { posts, title } = props;
+
+  const cards = [1, 2, 3];
 
   return (
     <Grid
@@ -24,10 +28,18 @@ function Main(props) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <Markdown className="markdown" key={post.substring(0, 40)}>
-          {post}
-        </Markdown>
+          <Container sx={{ py: 2 }} maxWidth="md">
+           {/* End hero unit */}
+           <Grid container spacing={2}>
+             {cards.map((card) => (
+               <Grid item key={card} xs={12} sm={6} md={4}>
+                 <Cards />
+               </Grid>
+             ))}
+           </Grid>
+         </Container>
       ))}
+      <Pagination />
     </Grid>
   );
 }

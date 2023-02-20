@@ -96,13 +96,13 @@ export default function Home() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
             />
+            <Main title="From the firehose" posts={posts} />
           </Grid>
         </main>
       </Container>

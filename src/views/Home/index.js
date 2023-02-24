@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Header from './Header';
+import Header from '../Commun/Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Main from './Main';
@@ -80,14 +80,9 @@ const sidebar = {
   ],
 };
 
-const theme = createTheme();
-
 export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
+      <>
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -105,11 +100,7 @@ export default function Home() {
             <Main title="From the firehose" posts={posts} />
           </Grid>
         </main>
-      </Container>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
-    </ThemeProvider>
+      </>
+      
   );
 }

@@ -1,6 +1,7 @@
 export { default as Home } from './Home';
 export { default as About } from './About';
 export { default as Users } from './Users';
+export { default as Single } from './Single';
 // Auth
 export { default as SignIn } from './Auth/Sign-in';
 export { default as SignUp } from './Auth/Sign-up';

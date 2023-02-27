@@ -8,8 +8,8 @@ import Cards from '../Commun/Cards';
 import Pagination from '../Commun/Pagination';
 
 function Main(props) {
-  const { posts, title } = props;
-
+  const { title } = props;
+  const posts = [1,2,3]; 
   const cards = [1, 2, 3];
 
   return (

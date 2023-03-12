@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import { Home, About, Users, Single, Dashboard, SignIn, SignUp, Checkout, ForgotPassword } from './views';
+import { Home, About, Users, Single, Dashboard, SignIn, SignUp, Checkout, ForgotPassword, Product } from './views';
 import Header from './views/Commun/Header';
 
 const sections = [
@@ -13,6 +13,7 @@ const sections = [
   { title: 'About', url: '/about' },
   { title: 'Users', url: '/users' },
   { title: 'Single', url: '/single' },
+  { title: 'Product', url: '/product' },
   { title: 'Checkout', url: '/checkout' },
   { title: 'Sing In', url: '/sign-in' },
   { title: 'Sign Up', url: '/sign-up' },
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/users" element={<Users />} />
           <Route path="/single" element={<Single />} />
+          <Route path="/product" element={<Product />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-Up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

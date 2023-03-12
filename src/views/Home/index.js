@@ -71,14 +71,14 @@ export default function Home() {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Grid container spacing={2} sx={{ mt: 3 }}>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
             />
-            <Main title="From the firehose" />
+            <Main />
           </Grid>
         </main>
       </>

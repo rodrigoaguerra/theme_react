@@ -8,7 +8,6 @@ import Cards from '../Commun/Cards';
 import Pagination from '../Commun/Pagination';
 
 function Main(props) {
-  const { title } = props;
   const posts = [1,2,3]; 
   const cards = [1, 2, 3];
 
@@ -16,19 +15,16 @@ function Main(props) {
     <Grid
       item
       xs={12}
-      md={8}
+      md={9}
       sx={{
         '& .markdown': {
           py: 3,
+          px: 0
         },
       }}
     >
-      <Typography variant="h6" gutterBottom>
-        {title}
-      </Typography>
-      <Divider />
       {posts.map((post) => (
-          <Container sx={{ py: 2 }} maxWidth="md">
+          <Container sx={{ py: 2, px: 0}} maxWidth="md">
            {/* End hero unit */}
            <Grid container spacing={2}>
              {cards.map((card) => (

@@ -23,7 +23,7 @@ const sections = [
 export default function App() {
   return (
     <Router>
-      <Header title="Blog" sections={sections} />
+      <Header sections={sections} />
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

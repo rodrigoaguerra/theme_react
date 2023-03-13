@@ -5,42 +5,30 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Galery from './Galery';
 import Data from './Data';
-// import MoreInfo from './MoreInfo';
-import useStyles from './styles';
+import MoreInfo from './MoreInfo';
 
 export default function Produto(props) {
-  // const { setView } = props;
-  const classes = useStyles();
-  // const [value, setValue] = React.useState(0);
-
-  return (
-    <Grid container className={classes.root}>
+    return (
+    <Grid container spacing={2}>
       <Grid item xs={12}>
         <Breadcrumbs aria-label='breadcrumb'>
           <Link
-            className={classes.nav}
             color='inherit'
-            // onClick={() => setView({ page: 'Produtos', data: props.data })}
           >
             Loja 1
           </Link>
           <Typography color='textPrimary'>{"Um titulo qualquer"}</Typography>
         </Breadcrumbs>
       </Grid>
-      <Grid item xs={8}>
+      <Grid item xs={12} sm={12} md={7}>
         <Galery />
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} sm={12} md={5}>
         <Data />
       </Grid>
-          <Grid item md={6} className={classes.galery}>
+      <Grid item xs={12} sm={12} md={12}>
+        <MoreInfo />
       </Grid>
-      {/* <Grid item xs={12} sm={12} md={6} className={classes.data}>
-        <Data {...props.data} />
-      </Grid>
-      <Grid item xs={12} sm={12} md={12} className={classes.data}>
-        <MoreInfo {...props.data} />
-      </Grid> */}
     </Grid>
   );
 }

@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import Payment from '@mui/icons-material/Payment';
-import useStyles from './styles';
 
 export default function Produto() {
   const p = { 
@@ -13,50 +12,49 @@ export default function Produto() {
     excerpt: 'Resumo do produto',
     value: '25,00',
   };
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <div className={classes.title}>
+    <div>
+      <div>
         <Typography variant='h4'>{p.title}</Typography>
       </div>
-      <div className={classes.code}>
+      <div>
         <Typography variant='body1' color='textSecondary'>
           Código: {p.id}
         </Typography>
       </div>
-      <div className={classes.tags}>
+      <div>
         {p.tags &&
           p.tags.map((tag, index) => <Chip label={tag} key={`tag-${index}`} />)}
       </div>
-      <div className={classes.value}>
+      <div>
         <Typography variant='h3' color='textSecondary'>
           {p.value ? `R$ ${p.value}` : 'Sem Valor'}
         </Typography>
       </div>
-      <div className={classes.cardValue}>
+      <div>
         <Typography variant='h4' color='textSecondary'>
           <Payment aria-label='delete' /> 5x R$ 5.00
         </Typography>
       </div>
-      <div className={classes.description}>
+      <div>
         <Typography
           variant='body1'
           color='textSecondary'
           dangerouslySetInnerHTML={{ __html: p.excerpt }}
         ></Typography>
       </div>
-      <div className={classes.delivery}>
+      <div>
         <Typography variant='body1' color='textSecondary'>
           Entregas em curitiba e região metropolitana
         </Typography>
       </div>
-      <div className={classes.deliveryInfo}>
+      <div>
         <Typography variant='body2' color='textSecondary'>
           saiba mais sobre prazos de entrega e formas de envio
         </Typography>
       </div>
-      <div className={classes.quantidade}>
+      <div>
         {/* <TextField
           id='outlined-helperText'
           label='Quantidade'
@@ -65,13 +63,12 @@ export default function Produto() {
           variant='outlined'
         /> */}
       </div>
-      <div className={classes.containerButton}>
+      <div>
         <Button
           disabled={true}
           variant='contained'
           size='large'
           color='primary'
-          className={classes.button}
         >
           Encomendar
         </Button>
